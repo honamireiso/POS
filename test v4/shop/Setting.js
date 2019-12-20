@@ -55,6 +55,7 @@ Setting.save = function () {
     return
   }
   Shop.save(shop)
+  alert('儲存成功！')
   /*
   Db.save('Shop', Shop)
   if (Shop.id == null || Shop.id.length === 0) {

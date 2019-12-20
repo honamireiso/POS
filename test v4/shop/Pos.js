@@ -78,12 +78,12 @@ Pos.start = function () {
     poswitch = "true"
   }
   Ui.id('orderTableBody').innerHTML = Pos.list(Order.records)
-  Ui.id('price').value = price
+  Ui.id('totalPrice').value = Order.totalPrice
   Pos.calcPrice()
 }
 
 Pos1.start = function () {
-  Shop1.load()
+  Shop.load()
   Ui.show(Pos.html)
   Ui.id('items').innerHTML = Pos.optionList(Shop1.shop.items)
   Ui.id('addons').innerHTML = Pos.optionList(Shop1.shop.addons)
@@ -92,11 +92,12 @@ Pos1.start = function () {
     poswitch = "true"
   }
   Ui.id('orderTableBody').innerHTML = Pos.list(Order.records)
+  Ui.id('totalPrice').value = Order.totalPrice
   Pos.calcPrice()
 }
 
 Pos2.start = function () {
-  Shop2.load()
+  Shop.load()
   Ui.show(Pos.html)
   Ui.id('items').innerHTML = Pos.optionList(Shop2.shop.items)
   Ui.id('addons').innerHTML = Pos.optionList(Shop2.shop.addons)
@@ -105,11 +106,12 @@ Pos2.start = function () {
     poswitch = "true"
   }
   Ui.id('orderTableBody').innerHTML = Pos.list(Order.records)
+  Ui.id('totalPrice').value = Order.totalPrice
   Pos.calcPrice()
 }
 
 Pos3.start = function () {
-  Shop3.load()
+  Shop.load()
   Ui.show(Pos.html)
   Ui.id('items').innerHTML = Pos.optionList(Shop3.shop.items)
   Ui.id('addons').innerHTML = Pos.optionList(Shop3.shop.addons)
@@ -118,11 +120,12 @@ Pos3.start = function () {
     poswitch = "true"
   }
   Ui.id('orderTableBody').innerHTML = Pos.list(Order.records)
+  Ui.id('totalPrice').value = Order.totalPrice
   Pos.calcPrice()
 }
 
 Pos4.start = function () {
-  Shop1.load()
+  Shop.load()
   Ui.show(Pos.html)
   Ui.id('items').innerHTML = Pos.optionList(Shop4.shop.items)
   Ui.id('addons').innerHTML = Pos.optionList(Shop4.shop.addons)
@@ -131,11 +134,12 @@ Pos4.start = function () {
     poswitch = "true"
   }
   Ui.id('orderTableBody').innerHTML = Pos.list(Order.records)
+  Ui.id('totalPrice').value = Order.totalPrice
   Pos.calcPrice()
 }
 
 Pos5.start = function () {
-  Shop1.load()
+  Shop.load()
   Ui.show(Pos.html)
   Ui.id('items').innerHTML = Pos.optionList(Shop5.shop.items)
   Ui.id('addons').innerHTML = Pos.optionList(Shop5.shop.addons)
@@ -144,11 +148,12 @@ Pos5.start = function () {
     poswitch = "true"
   }
   Ui.id('orderTableBody').innerHTML = Pos.list(Order.records)
+  Ui.id('totalPrice').value = Order.totalPrice
   Pos.calcPrice()
 }
 
 Pos6.start = function () {
-  Shop1.load()
+  Shop.load()
   Ui.show(Pos.html)
   Ui.id('items').innerHTML = Pos.optionList(Shop6.shop.items)
   Ui.id('addons').innerHTML = Pos.optionList(Shop6.shop.addons)
@@ -157,11 +162,12 @@ Pos6.start = function () {
     poswitch = "true"
   }
   Ui.id('orderTableBody').innerHTML = Pos.list(Order.records)
+  Ui.id('totalPrice').value = Order.totalPrice
   Pos.calcPrice()
 }
 
 Pos7.start = function () {
-  Shop7.load()
+  Shop.load()
   Ui.show(Pos.html)
   Ui.id('items').innerHTML = Pos.optionList(Shop7.shop.items)
   Ui.id('addons').innerHTML = Pos.optionList(Shop7.shop.addons)
@@ -170,6 +176,7 @@ Pos7.start = function () {
     poswitch = "true"
   }
   Ui.id('orderTableBody').innerHTML = Pos.list(Order.records)
+  Ui.id('totalPrice').value = Order.totalPrice
   Pos.calcPrice()
 }
 Pos.goShop = function () {
@@ -177,13 +184,12 @@ Pos.goShop = function () {
     if (confirm('您的訂單尚未送出，請問是否要放棄該訂單？')) {
       Order = Pos.newOrder()
       poswitch = "false"
-      Shop.mainPage()
+      window.location.href='POS-master/img/home.html'
       return
     } else {
       return
     }
   }
-  Shop.mainPage()
 }
 
 Pos.abort = function () {
